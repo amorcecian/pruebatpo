@@ -11,6 +11,8 @@ import exceptions.ExceptionCliente;
 import businessDelegate.*;
 
 public class Test {
+	
+	
 
 	public static void main(String[] args) throws RemoteException, ExceptionCliente {		
 
