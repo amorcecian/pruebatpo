@@ -1,6 +1,6 @@
-package negocio;
+package src.negocio;
 
-import entities.CuentaCorrienteEntity;
+import src.entities.CuentaCorrienteEntity;
 
 public class CuentaCorriente {
 	private float limiteCredito;

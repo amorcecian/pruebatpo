@@ -1,8 +1,8 @@
-package controlador;
+package src.controlador;
 
 import java.util.List;
 
-import negocio.*;
+import src.negocio.*;
 
 public class ControladorProduccion {
 	private List<OrdenDeProduccion> ordenesDeProduccion;

@@ -1,15 +1,15 @@
-package test;
+package src.test;
 
-import negocio.Cliente;
+import src.negocio.Cliente;
 
 import java.util.List;
 
-import controlador.ControladorVenta;
-import dao.ClienteDAO;
-import dao.SucursalDAO;
-import dto.ClienteDTO;
-import dto.SucursalDTO;
-import exceptions.ExceptionCliente;
+import src.controlador.ControladorVenta;
+import src.dao.ClienteDAO;
+import src.dao.SucursalDAO;
+import src.dto.ClienteDTO;
+import src.dto.SucursalDTO;
+import src.exceptions.ExceptionCliente;
 
 public class Test {
 

@@ -1,13 +1,13 @@
-package controlador;
+package src.controlador;
 
 import java.util.List;
 import java.util.Vector;
 
-import negocio.*;
-import dto.*;
-import entities.EmpleadoEntity;
-import exceptions.ExceptionCliente;
-import dao.*;
+import src.negocio.*;
+import src.dto.*;
+import src.entities.EmpleadoEntity;
+import src.exceptions.ExceptionCliente;
+import src.dao.*;
 
 public class ControladorVenta {
 	

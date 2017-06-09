@@ -1,4 +1,4 @@
-package negocio;
+package src.negocio;
 
 import java.util.List;
 

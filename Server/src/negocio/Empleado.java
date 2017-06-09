@@ -1,7 +1,7 @@
-package negocio;
+package src.negocio;
 
-import dto.EmpleadoDTO;
-import entities.*;
+import src.dto.EmpleadoDTO;
+import src.entities.*;
 
 public class Empleado {
 	

@@ -1,7 +1,7 @@
-package dao;
+package src.dao;
 
-import negocio.Cliente;
-import negocio.CuentaCorriente;
+import src.negocio.Cliente;
+import src.negocio.CuentaCorriente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,11 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import dto.ClienteDTO;
-import dto.SucursalDTO;
-import entities.ClienteEntity;
-import entities.CuentaCorrienteEntity;
-import entities.SucursalEntity;
+import src.dto.ClienteDTO;
+import src.dto.SucursalDTO;
+import src.entities.ClienteEntity;
+import src.entities.CuentaCorrienteEntity;
+import src.entities.SucursalEntity;
 import exceptions.ExceptionCliente;
 import hbt.HibernateUtil;
 
