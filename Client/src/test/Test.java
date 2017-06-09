@@ -4,11 +4,11 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dto.ClienteDTO;
-import dto.EmpleadoDTO;
-import dto.SucursalDTO;
-import exceptions.ExceptionCliente;
-import businessDelegate.*;
+import src.dto.ClienteDTO;
+import src.dto.EmpleadoDTO;
+import src.dto.SucursalDTO;
+import src.exceptions.ExceptionCliente;
+import src.businessDelegate.*;
 
 public class Test {
 	

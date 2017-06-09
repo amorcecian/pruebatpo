@@ -1,14 +1,14 @@
-package businessDelegate;
+package src.businessDelegate;
 
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.List;
 
-import dto.ClienteDTO;
-import dto.EmpleadoDTO;
-import dto.SucursalDTO;
-import exceptions.ExceptionCliente;
-import interfaces.*;
+import src.dto.ClienteDTO;
+import src.dto.EmpleadoDTO;
+import src.dto.SucursalDTO;
+import src.exceptions.ExceptionCliente;
+import src.interfaces.*;
 
 public class BusinessDelegate implements IControllerVentas {
 	

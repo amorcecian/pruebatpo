@@ -12,8 +12,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 
 import src.entities.*;
-import exceptions.ExceptionCliente;
-import hbt.*;
+import src.exceptions.ExceptionCliente;
+import src.hbt.*;
 
 public class EmpleadoDAO {
 	private static SessionFactory sf=null;

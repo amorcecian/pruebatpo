@@ -11,8 +11,8 @@ import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
-import businessDelegate.BusinessDelegate;
-import dto.SucursalDTO;
+import src.businessDelegate.BusinessDelegate;
+import src.dto.SucursalDTO;
 
 public class AltaEmpleado {
 

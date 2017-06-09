@@ -17,8 +17,8 @@ import src.dto.SucursalDTO;
 import src.entities.ClienteEntity;
 import src.entities.CuentaCorrienteEntity;
 import src.entities.SucursalEntity;
-import exceptions.ExceptionCliente;
-import hbt.HibernateUtil;
+import src.exceptions.ExceptionCliente;
+import src.hbt.HibernateUtil;
 
 
 public class ClienteDAO {
