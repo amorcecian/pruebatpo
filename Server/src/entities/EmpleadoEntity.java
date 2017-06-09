@@ -1,10 +1,10 @@
-package entities;
+package src.entities;
 
 import java.io.Serializable;
 
 import javax.persistence.*;
 
-import dto.EmpleadoDTO;
+import src.dto.EmpleadoDTO;
 
 
 @Entity

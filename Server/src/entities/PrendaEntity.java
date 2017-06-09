@@ -1,11 +1,8 @@
-package entities;
+package src.entities;
 
 import java.util.List;
 
 import javax.persistence.*;
-
-import negocio.EtapaProductiva;
-import negocio.Stock;
 
 @Entity
 @Table(name="prendas")

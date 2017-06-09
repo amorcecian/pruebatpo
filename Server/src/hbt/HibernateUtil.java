@@ -1,29 +1,29 @@
-package hbt;
+package src.hbt;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import entities.AlmacenamientoEntity;
-import entities.ClienteEntity;
-import entities.CuentaCorrienteEntity;
-import entities.EmpleadoEntity;
-import entities.EtapaProductivaEntity;
-import entities.FacturaEntity;
-import entities.ItemOCMPEntity;
-import entities.ItemsPedidoEntity;
-import entities.ItemsPedidoIDEntity;
-import entities.LoteEntity;
-import entities.MaterialEntity;
-import entities.MaterialPorPrendaEntity;
-import entities.NotaDeCredito;
-import entities.OrdenCMPEntity;
-import entities.OrdenDeProduccionEntity;
-import entities.PedidoEntity;
-import entities.PrendaEntity;
-import entities.PrendaVentaEntity;
-import entities.RemitoEntity;
-import entities.StockEntity;
-import entities.SucursalEntity;
+import src.entities.AlmacenamientoEntity;
+import src.entities.ClienteEntity;
+import src.entities.CuentaCorrienteEntity;
+import src.entities.EmpleadoEntity;
+import src.entities.EtapaProductivaEntity;
+import src.entities.FacturaEntity;
+import src.entities.ItemOCMPEntity;
+import src.entities.ItemsPedidoEntity;
+import src.entities.ItemsPedidoIDEntity;
+import src.entities.LoteEntity;
+import src.entities.MaterialEntity;
+import src.entities.MaterialPorPrendaEntity;
+import src.entities.NotaDeCredito;
+import src.entities.OrdenCMPEntity;
+import src.entities.OrdenDeProduccionEntity;
+import src.entities.PedidoEntity;
+import src.entities.PrendaEntity;
+import src.entities.PrendaVentaEntity;
+import src.entities.RemitoEntity;
+import src.entities.StockEntity;
+import src.entities.SucursalEntity;
 
 public class HibernateUtil
 {
