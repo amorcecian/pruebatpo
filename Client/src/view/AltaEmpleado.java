@@ -1,4 +1,4 @@
-package view;
+
 
 import java.awt.EventQueue;
 import java.util.List;
@@ -11,8 +11,8 @@ import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
-import src.businessDelegate.BusinessDelegate;
-import src.dto.SucursalDTO;
+import businessDelegate.BusinessDelegate;
+import dto.SucursalDTO;
 
 public class AltaEmpleado {
 
@@ -116,8 +116,8 @@ public class AltaEmpleado {
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(122, 195, 180, 22);	
 		comboBox.addItem("");
-		for(SucursalDTO sucu:listaSucursales){
-			comboBox.addItem(sucu);			
+		for(SucursalDTO sucu:listaSucursales){			
+			comboBox.addItem(sucu.getNombre());			
 		}
 		frmAltaEmpleado.getContentPane().add(comboBox);
 		}catch(Exception e){
