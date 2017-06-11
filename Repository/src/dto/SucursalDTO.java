@@ -18,9 +18,11 @@ public class SucursalDTO implements Serializable {
 	
 	public SucursalDTO(){}
 	
-	public SucursalDTO(int id,String nombre){
+	public SucursalDTO(int id,String nombre,String domicilio, String horario){
 		this.idSucursal=id;
-		this.nombre=nombre;		
+		this.nombre=nombre;	
+		this.domicilio=domicilio;
+		this.horario=horario;
 	}
 	
 

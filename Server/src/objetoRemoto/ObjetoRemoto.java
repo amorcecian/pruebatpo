@@ -57,4 +57,8 @@ public class ObjetoRemoto extends UnicastRemoteObject implements IControllerVent
 		return ControladorVenta.getInstancia().listarEmpleados();
 	}
 	
+	public void agregarSucursal(SucursalDTO sucursal) throws RemoteException{
+		ControladorVenta.getInstancia().agregarSucursal(sucursal);
+	}
+	
 }

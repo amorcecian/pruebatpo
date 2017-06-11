@@ -90,7 +90,7 @@ public class Sucursal {
 	}
 	
 	public SucursalDTO toDTO(){
-		return new SucursalDTO(idSucursal,nombre);
+		return new SucursalDTO(idSucursal,nombre,domicilio,horario);
 	}
 	
 
