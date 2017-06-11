@@ -1,15 +1,15 @@
-package src.objetoRemoto;
+package objetoRemoto;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
-import src.dto.ClienteDTO;
-import src.dto.EmpleadoDTO;
-import src.dto.SucursalDTO;
-import src.exceptions.ExceptionCliente;
-import src.interfaces.*;
-import src.controlador.*;
+import dto.ClienteDTO;
+import dto.EmpleadoDTO;
+import dto.SucursalDTO;
+import exceptions.ExceptionCliente;
+import interfaces.*;
+import controlador.*;
 
 public class ObjetoRemoto extends UnicastRemoteObject implements IControllerVentas {
 

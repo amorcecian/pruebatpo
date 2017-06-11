@@ -1,4 +1,4 @@
-package src.negocio;
+package negocio;
 
 public class Almacenamiento {
 	private String calle;

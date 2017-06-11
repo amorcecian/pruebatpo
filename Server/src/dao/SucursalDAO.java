@@ -1,4 +1,4 @@
-package src.dao;
+package dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 
-import src.dto.*;
-import src.hbt.*;
-import src.entities.*;
-import src.negocio.*;
+import dto.*;
+import hbt.*;
+import entities.*;
+import negocio.*;
 
 public class SucursalDAO {
 	

@@ -1,9 +1,9 @@
-package src.negocio;
+package negocio;
 
 import java.util.List;
 
-import src.dto.ClienteDTO;
-import src.entities.ClienteEntity;
+import dto.ClienteDTO;
+import entities.ClienteEntity;
 
 public class Cliente {
 	

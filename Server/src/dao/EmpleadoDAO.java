@@ -1,19 +1,19 @@
-package src.dao;
+package dao;
 
 import java.util.List;
 
-import src.negocio.Cliente;
-import src.negocio.Empleado;
-import src.negocio.Sucursal;
+import negocio.Cliente;
+import negocio.Empleado;
+import negocio.Sucursal;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 
-import src.entities.*;
-import src.exceptions.ExceptionCliente;
-import src.hbt.*;
+import entities.*;
+import exceptions.ExceptionCliente;
+import hbt.*;
 
 public class EmpleadoDAO {
 	private static SessionFactory sf=null;

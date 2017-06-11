@@ -1,11 +1,11 @@
-package src.entities;
+package entities;
 
 import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
 
-import src.dto.ClienteDTO;
+import dto.ClienteDTO;
 
 
 @Entity

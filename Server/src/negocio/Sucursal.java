@@ -1,7 +1,7 @@
-package src.negocio;
+package negocio;
 
-import src.dto.SucursalDTO;
-import src.entities.*;
+import dto.SucursalDTO;
+import entities.*;
 
 public class Sucursal {
 	

@@ -4,11 +4,11 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
-import src.dto.ClienteDTO;
-import src.dto.EmpleadoDTO;
-import src.dto.SucursalDTO;
-import src.exceptions.ExceptionCliente;
-import src.businessDelegate.*;
+import dto.ClienteDTO;
+import dto.EmpleadoDTO;
+import dto.SucursalDTO;
+import exceptions.ExceptionCliente;
+import businessDelegate.*;
 
 public class Test {
 	
@@ -24,8 +24,8 @@ public class Test {
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-		}*/
-		/*
+		}
+		
 		ClienteDTO caux = new ClienteDTO();
 		caux.setCondicion("activo");
 		caux.setDireccion("mosconi 123");
@@ -41,12 +41,12 @@ public class Test {
 		caux = BusinessDelegate.getInstancia().recuperarCliente(2);
 		caux.setLimiteCredito(2000);
 		BusinessDelegate.getInstancia().actualizarCliente(caux);
-		
+		*/
 		for(ClienteDTO c :  BusinessDelegate.getInstancia().listarClientes()){
 			System.out.println(c.getNombre());
 		}
 		
-	*/
+	/*
 		EmpleadoDTO e = new EmpleadoDTO();
 		e.setNombre("pepe argento234");
 		e.setMail("a234j@123.com");
@@ -65,7 +65,7 @@ public class Test {
 		
 		for(EmpleadoDTO es :  BusinessDelegate.getInstancia().listarEmpleados()){
 			System.out.println(es.getArea()+es.getContrasenia()+es.getMail()+es.getNombre()+es.getUser()+es.getIdEmpleado()+es.getIdSucu()+es.getIdUsuario());
-		}
+		}*/
 	}
 
 }

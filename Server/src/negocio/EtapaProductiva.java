@@ -1,4 +1,4 @@
-package src.negocio;
+package negocio;
 
 public class EtapaProductiva {
 	private AreaProductiva areaProductiva;

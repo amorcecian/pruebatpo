@@ -1,4 +1,4 @@
-package src.negocio;
+package negocio;
 
 public class ItemPedido {
 	private int cantidad;

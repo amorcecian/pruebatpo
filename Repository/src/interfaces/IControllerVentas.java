@@ -1,10 +1,10 @@
-package src.interfaces;
+package interfaces;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
-import src.dto.*;
-import src.exceptions.ExceptionCliente;
+import dto.*;
+import exceptions.ExceptionCliente;
 
 
 public interface IControllerVentas extends Remote {

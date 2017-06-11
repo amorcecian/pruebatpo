@@ -1,9 +1,9 @@
-package src.service;
+package service;
 
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
-import src.objetoRemoto.*;
-import src.interfaces.*;
+import objetoRemoto.*;
+import interfaces.*;
 
 public class Server {
 

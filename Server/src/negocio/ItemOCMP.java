@@ -1,4 +1,4 @@
-package src.negocio;
+package negocio;
 
 public class ItemOCMP {
 	private int cantidad;

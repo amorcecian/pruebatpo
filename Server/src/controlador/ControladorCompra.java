@@ -1,8 +1,8 @@
-package src.controlador;
+package controlador;
 
 import java.util.List;
 
-import src.negocio.*;
+import negocio.*;
 
 public class ControladorCompra {
 	private List<OrdenCMP> ordenesMP;

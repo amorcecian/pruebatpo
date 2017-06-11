@@ -1,4 +1,4 @@
-
+package view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -82,7 +82,8 @@ public class AltaSucursal extends JFrame {
 		btnAlta = new JButton("Alta");
 		btnAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				SucursalDTO sucursal=new SucursalDTO(txtNombre.getText(),txtDomicilio.getText(),txtHorario.getText());
+				//revisar 
+				//SucursalDTO sucursal=new SucursalDTO(txtNombre.getText(),txtDomicilio.getText(),txtHorario.getText());
 				//Agregar Sucursal
 				
 			}
