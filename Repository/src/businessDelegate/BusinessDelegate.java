@@ -72,4 +72,9 @@ public class BusinessDelegate implements IControllerVentas {
 		return objetoRemoto.listarEmpleados();
 	}
 
+	public void agregarSucursal(SucursalDTO sucursal) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

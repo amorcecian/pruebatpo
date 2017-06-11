@@ -101,14 +101,18 @@ public class ControladorVenta {
 	//METODOS SUCURSAL
 	//*********************************************************************************	
 		//Agregar Sucursal
-	public void agregarSucursal(Integer idSucursal,String nombre,String domicilio,String horario){
-		Sucursal sucursal = new Sucursal(idSucursal, nombre, domicilio, horario);
-		SucursalDAO.getInstancia().agregarSucursal(sucursal);
+	public void agregarSucursal(SucursalDTO sucursal){
+		Sucursal sucu = new Sucursal(sucursal.getIdSucursal(),sucursal.getNombre(),sucursal.getDomicilio(),sucursal.getHorario());
+		SucursalDAO.getInstancia().agregarSucursal(sucu);
 	}
 	
 		//Recuperar Sucursal
 	public Sucursal recuperarSucursal(Integer idSucursal){
 		return SucursalDAO.getInstancia().obtenerSucursal(idSucursal);
+	}
+	
+	public List<SucursalDTO> listarSucursales(){
+		return SucursalDAO.getInstancia().listarSucursales();	
 	}
 
 	//*********************************************************************************
@@ -124,9 +128,7 @@ public class ControladorVenta {
 	
 	
 	
-	public List<SucursalDTO> listarSucursales(){
-		return SucursalDAO.getInstancia().listarSucursales();	
-	}
+
 	
 	public int generarPedido(int idCliente, int idSucursal, String fechaGeneracion){
 		return 0;

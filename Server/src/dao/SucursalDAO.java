@@ -51,7 +51,7 @@ public class SucursalDAO {
 		List<SucursalEntity> list=session.createQuery("from sucursales").list();
 		List<SucursalDTO> listaSucursales=new ArrayList<SucursalDTO>();
 		for(SucursalEntity sucu:list){
-			SucursalDTO SucuDTO=new SucursalDTO(sucu.getIdSucursal(),sucu.getNombre());
+			SucursalDTO SucuDTO=new SucursalDTO(sucu.getIdSucursal(),sucu.getNombre(),sucu.getDomicilio(),sucu.getHorario());
 			listaSucursales.add(SucuDTO);
 		}
 		session.flush();
