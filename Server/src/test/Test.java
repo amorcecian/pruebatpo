@@ -21,7 +21,7 @@ public class Test {
 
 		//System.out.println(SucursalDAO.getInstancia().obtenerSucursal("sucursal 5").getIdSucursal());
 		//Integer a = new Integer(692);
-<<<<<<< Updated upstream
+
 		/*ControladorVenta.getInstancia().agregarSucursal(1,"San Telmo", "Av Independencia 450", "12 a 16");
 =======
 		//ControladorVenta.getInstancia().agregarSucursal(1,"San Telmo", "Av Independencia 450", "12 a 16");

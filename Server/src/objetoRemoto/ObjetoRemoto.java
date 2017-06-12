@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 package objetoRemoto;
 
 import java.rmi.RemoteException;
@@ -63,95 +63,27 @@ public class ObjetoRemoto extends UnicastRemoteObject implements IControllerVent
 		ControladorVenta.getInstancia().agregarSucursal(sucursal);
 	}
 
-	@Override
+
 	public void agregarMaterial(MaterialDTO m) throws RemoteException, ExceptionCliente {
 		ControladorCompra.getInstancia().agregarMaterial(m);
 		
 	}
 
-	@Override
+
 	public void actualizarMaterial(MaterialDTO e) throws RemoteException, ExceptionCliente {
 		ControladorCompra.getInstancia().actualizarMaterial(e);
 		
 	}
 
-	@Override
+
 	public MaterialDTO recuperarMaterial(Integer i) throws RemoteException, ExceptionCliente {
 		return ControladorCompra.getInstancia().recuperarMaterial(i);
 	}
 
-	@Override
 	public List<MaterialDTO> listarMateriales() throws RemoteException, ExceptionCliente {
 		return ControladorCompra.getInstancia().listarMateriales();
 	}
 	
 	
 	
-}
-=======
-package objetoRemoto;
-
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
-import java.util.List;
-
-import dto.ClienteDTO;
-import dto.EmpleadoDTO;
-import dto.SucursalDTO;
-import exceptions.ExceptionCliente;
-import exceptions.ExceptionSucursal;
-import interfaces.*;
-import controlador.*;
-
-public class ObjetoRemoto extends UnicastRemoteObject implements IControllerVentas {
-
-	private static final long serialVersionUID = 2833723427294478879L;
-
-	public ObjetoRemoto() throws RemoteException {
-		super();
-	}
-
-	public List<SucursalDTO> listarSucursales() throws RemoteException {
-		return ControladorVenta.getInstancia().listarSucursales();
-	}
-
-	public void agregarCliente(ClienteDTO cliente) throws ExceptionCliente{
-		ControladorVenta.getInstancia().agregarCliente(cliente);
-	}
-	public void actualizarCliente(ClienteDTO cliente) throws ExceptionCliente{
-		ControladorVenta.getInstancia().actualizarCliente(cliente);
-	}
-
-	public ClienteDTO recuperarCliente(Integer id) throws ExceptionCliente{
-		return ControladorVenta.getInstancia().recuperarCliente(id);
-	}
-	
-	public List<ClienteDTO> listarClientes() throws ExceptionCliente{
-		return ControladorVenta.getInstancia().listarClientes();
-	}
-
-	public void agregarEmpleado(EmpleadoDTO e) throws RemoteException, ExceptionCliente {
-		ControladorVenta.getInstancia().agregarEmpleado(e);
-		
-	}
-
-	public void actualizarEmpleado(EmpleadoDTO e) throws RemoteException, ExceptionCliente {
-		ControladorVenta.getInstancia().actualizarEmpleado(e);
-		
-	}
-
-	public EmpleadoDTO recuperarEmpleado(Integer i) throws RemoteException, ExceptionCliente {
-		return ControladorVenta.getInstancia().recuperarEmpleado(i);
-	}
-
-	public List<EmpleadoDTO> listarEmpleados() throws RemoteException, ExceptionCliente {
-		// TODO Auto-generated method stub
-		return ControladorVenta.getInstancia().listarEmpleados();
-	}
-	
-	public void agregarSucursal(SucursalDTO sucursal) throws RemoteException{
-		ControladorVenta.getInstancia().agregarSucursal(sucursal);
-	}
-	
 }
->>>>>>> Stashed changes
