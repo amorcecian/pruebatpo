@@ -11,8 +11,29 @@ public class OrdenCMP {
 	private OrdenDeProduccion ordenDeProduccion;
 	private String estado;
 	private float loteValor;
+	private boolean activo;
 	
 	public OrdenCMP(){}
+	
+	
+	public OrdenCMP(Integer idODCM, String fechaPedido,
+			String fechaEstDespacho, String fechaRealDespacho,
+			List<ItemOCMP> itemPedidoInsumo,
+			OrdenDeProduccion ordenDeProduccion, String estado,
+			float loteValor, boolean activo) {
+		super();
+		this.idODCM = idODCM;
+		this.fechaPedido = fechaPedido;
+		this.fechaEstDespacho = fechaEstDespacho;
+		this.fechaRealDespacho = fechaRealDespacho;
+		this.itemPedidoInsumo = itemPedidoInsumo;
+		this.ordenDeProduccion = ordenDeProduccion;
+		this.estado = estado;
+		this.loteValor = loteValor;
+		this.activo = activo;
+	}
+
+
 
 
 	public Integer getIdODCM() {
@@ -84,6 +105,16 @@ public class OrdenCMP {
 
 	public void setLoteValor(float loteValor) {
 		this.loteValor = loteValor;
+	}
+
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 	
 	

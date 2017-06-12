@@ -14,7 +14,6 @@ import negocio.*;
 
 public class ControladorCompra {
 	private List<OrdenCMP> ordenesMP;
-	private List<Proveedor> proveedores;
 	private List<Material> materiales;
 	
 	private static ControladorCompra instancia;

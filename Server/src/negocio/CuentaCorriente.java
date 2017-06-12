@@ -11,7 +11,9 @@ public class CuentaCorriente {
 	public CuentaCorriente(){}
 	
 	
+	
 
+	
 	public CuentaCorriente(float limiteCredito, String condicionPago,
 			float saldo, float valorConsignacion) {
 		super();
@@ -20,7 +22,7 @@ public class CuentaCorriente {
 		this.saldo = saldo;
 		this.valorConsignacion = valorConsignacion;
 	}
-	
+
 	public CuentaCorriente(CuentaCorrienteEntity cce){
 		this.limiteCredito=cce.getLimiteCredito();
 		this.condicionPago=cce.getCondicionPago();
@@ -61,7 +63,5 @@ public class CuentaCorriente {
 	public void setValorConsignacion(float valorConsignacion) {
 		this.valorConsignacion = valorConsignacion;
 	}
-	
-	
 
 }

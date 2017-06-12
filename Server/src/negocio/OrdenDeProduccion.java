@@ -11,8 +11,28 @@ public class OrdenDeProduccion {
 	private Pedido pedido;
 	private float precioProd;
 	private List<Lote> lotes;
+	private boolean activo;
 	
 	public OrdenDeProduccion (){}
+	
+	
+
+	public OrdenDeProduccion(int idOrdenDeProduccion, String fecha,
+			String tipo, List<Prenda> prenda, List<ItemOCMP> materiales,
+			Pedido pedido, float precioProd, List<Lote> lotes, boolean activo) {
+		super();
+		this.idOrdenDeProduccion = idOrdenDeProduccion;
+		this.fecha = fecha;
+		this.tipo = tipo;
+		this.prenda = prenda;
+		this.materiales = materiales;
+		this.pedido = pedido;
+		this.precioProd = precioProd;
+		this.lotes = lotes;
+		this.activo = activo;
+	}
+
+
 
 	public int getIdOrdenDeProduccion() {
 		return idOrdenDeProduccion;
@@ -76,6 +96,18 @@ public class OrdenDeProduccion {
 
 	public void setLotes(List<Lote> lotes) {
 		this.lotes = lotes;
+	}
+
+
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 	
 	

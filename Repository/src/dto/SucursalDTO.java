@@ -1,7 +1,7 @@
 package dto;
 
 import java.io.Serializable;
-import java.util.List;
+
 
 public class SucursalDTO implements Serializable {
 	
@@ -13,18 +13,28 @@ public class SucursalDTO implements Serializable {
 	private String nombre;
 	private String domicilio;
 	private String horario;
-	private List<EmpleadoDTO> empleados;
-	List <ClienteDTO> clientes;
+	private EmpleadoDTO encargado;
+	private boolean activo;
 	
 	public SucursalDTO(){}
 	
-	public SucursalDTO(Integer id,String nombre,String domicilio, String horario){
-		this.idSucursal=id;
-		this.nombre=nombre;	
-		this.domicilio=domicilio;
-		this.horario=horario;
-	}
 	
+	public SucursalDTO(Integer idSucursal, String nombre, String domicilio,
+			String horario, EmpleadoDTO encargado, boolean activo) {
+		super();
+		this.idSucursal = idSucursal;
+		this.nombre = nombre;
+		this.domicilio = domicilio;
+		this.horario = horario;
+		this.encargado = encargado;
+		this.activo = activo;
+	}
+
+
+
+
+
+
 
 	public int getIdSucursal() {
 		return idSucursal;
@@ -58,23 +68,36 @@ public class SucursalDTO implements Serializable {
 		this.horario = horario;
 	}
 
-	public List<EmpleadoDTO> getEmpleados() {
-		return empleados;
-	}
-
-	public void setEmpleados(List<EmpleadoDTO> empleados) {
-		this.empleados = empleados;
-	}
-
-	public List<ClienteDTO> getClientes() {
-		return clientes;
-	}
-
-	public void setClientes(List<ClienteDTO> clientes) {
-		this.clientes = clientes;
+	public EmpleadoDTO getEncargado() {
+		return encargado;
 	}
 
 
+	public void setEncargado(EmpleadoDTO encargado) {
+		this.encargado = encargado;
+	}
+
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+	public void setIdSucursal(Integer idSucursal) {
+		this.idSucursal = idSucursal;
+	}
+
+	
 	
 	
 

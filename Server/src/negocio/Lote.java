@@ -10,8 +10,28 @@ public class Lote {
 	private Almacenamiento ubicacion;
 	private int cantidadProducida;
 	private int cantidadRestante;
+	private boolean activo;
 	
 	public Lote(){}
+
+	public Lote(int idLote, Prenda prenda, OrdenDeProduccion ordenDeProduccion,
+			int proceso, String estado, float costoProd,
+			Almacenamiento ubicacion, int cantidadProducida,
+			int cantidadRestante, boolean activo) {
+		super();
+		this.idLote = idLote;
+		this.prenda = prenda;
+		this.ordenDeProduccion = ordenDeProduccion;
+		this.proceso = proceso;
+		this.estado = estado;
+		this.costoProd = costoProd;
+		this.ubicacion = ubicacion;
+		this.cantidadProducida = cantidadProducida;
+		this.cantidadRestante = cantidadRestante;
+		this.activo = activo;
+	}
+
+
 
 	public int getIdLote() {
 		return idLote;
@@ -83,6 +103,14 @@ public class Lote {
 
 	public void setCantidadRestante(int cantidadRestante) {
 		this.cantidadRestante = cantidadRestante;
+	}
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 	
 	

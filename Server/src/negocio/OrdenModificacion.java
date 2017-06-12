@@ -6,8 +6,25 @@ public class OrdenModificacion {
 	private Empleado autorizado;
 	private String comentarios;
 	private Prenda prenda;
+	private boolean activo;
 	
 	public OrdenModificacion(){}
+	
+	
+
+	public OrdenModificacion(Empleado encargado, int cantidad,
+			Empleado autorizado, String comentarios, Prenda prenda,
+			boolean activo) {
+		super();
+		this.encargado = encargado;
+		this.cantidad = cantidad;
+		this.autorizado = autorizado;
+		this.comentarios = comentarios;
+		this.prenda = prenda;
+		this.activo = activo;
+	}
+
+
 
 	public Empleado getEncargado() {
 		return encargado;
@@ -47,6 +64,18 @@ public class OrdenModificacion {
 
 	public void setPrenda(Prenda prenda) {
 		this.prenda = prenda;
+	}
+
+
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 	
 	

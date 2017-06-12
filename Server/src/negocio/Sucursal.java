@@ -12,6 +12,7 @@ public class Sucursal {
 	private Empleado encargado;
 	//private List<Empleado> empleados;
 	//List <Cliente> clientes;
+	private boolean activo;
 	
 	public Sucursal(SucursalEntity sucursal){
 		this.idSucursal=sucursal.getIdSucursal();
@@ -21,23 +22,33 @@ public class Sucursal {
 		//this.empleados=sucursal.getEmpleados();
 	}
 	
-	public Sucursal(Integer idSucursal,String nombre,String domicilio,String horario){
-		this.idSucursal=idSucursal;
-		this.nombre=nombre;
-		this.domicilio=domicilio;
-		this.horario=horario;
-		//this.encargado=encargado;
-		//this.clientes=new ArrayList<>();
+	
+	
+	
+	public Sucursal(Integer idSucursal, String nombre, String domicilio,
+			String horario, boolean activo) {
+		super();
+		this.idSucursal = idSucursal;
+		this.nombre = nombre;
+		this.domicilio = domicilio;
+		this.horario = horario;
+		this.activo = activo;
 	}
 	
-	public Sucursal(Integer idSucursal,String nombre,String domicilio,String horario, Empleado encargado){
-		this.idSucursal=idSucursal;
-		this.nombre=nombre;
-		this.domicilio=domicilio;
-		this.horario=horario;
-		this.encargado=encargado;
-		//this.clientes=new ArrayList<>();
+	
+	public Sucursal(Integer idSucursal, String nombre, String domicilio,
+			String horario, Empleado encargado, boolean activo) {
+		super();
+		this.idSucursal = idSucursal;
+		this.nombre = nombre;
+		this.domicilio = domicilio;
+		this.horario = horario;
+		this.encargado = encargado;
+		this.activo = activo;
 	}
+
+
+
 
 	public Integer getIdSucursal() {
 		return idSucursal;
@@ -89,6 +100,20 @@ public class Sucursal {
 		this.encargado = encargado;
 	}
 	
+	public boolean isActivo() {
+		return activo;
+	}
+
+
+
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+
+
+
+
 	public SucursalDTO toDTO(){
 		return new SucursalDTO(idSucursal,nombre,domicilio,horario);
 	}

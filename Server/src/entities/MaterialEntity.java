@@ -22,12 +22,14 @@ public class MaterialEntity {
 	private String proveedor;
 	@Column(name="costo")
 	private float costo;
+	@Column(name="activo")
+	private boolean activo;
 	
 	public MaterialEntity(){};
-	
+
 	public MaterialEntity(Integer idMaterial, String nombre,
 			Integer cantDisponible, Integer cantReservada, String proveedor,
-			float costo) {
+			float costo, boolean activo) {
 		super();
 		this.idMaterial = idMaterial;
 		this.nombre = nombre;
@@ -35,7 +37,10 @@ public class MaterialEntity {
 		this.cantReservada = cantReservada;
 		this.proveedor = proveedor;
 		this.costo = costo;
+		this.activo = activo;
 	}
+
+
 
 	public Integer getIdMaterial() {
 		return idMaterial;
@@ -85,6 +90,14 @@ public class MaterialEntity {
 		this.costo = costo;
 	}
 
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+
 	public MaterialDTO toDTO() {
 		MaterialDTO maux = new MaterialDTO();
 		maux.setCantDisponible(this.cantDisponible);
@@ -93,6 +106,7 @@ public class MaterialEntity {
 		maux.setIdMaterial(this.getIdMaterial());
 		maux.setNombre(this.nombre);
 		maux.setProveedor(this.getProveedor());
+		maux.setActivo(this.activo);
 		return maux;
 	}
 	
