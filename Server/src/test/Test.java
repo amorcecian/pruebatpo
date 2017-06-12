@@ -4,10 +4,13 @@ import negocio.Cliente;
 
 import java.util.List;
 
+import businessDelegate.BusinessDelegate;
+import controlador.ControladorCompra;
 import controlador.ControladorVenta;
 import dao.ClienteDAO;
 import dao.SucursalDAO;
 import dto.ClienteDTO;
+import dto.MaterialDTO;
 import dto.SucursalDTO;
 import exceptions.ExceptionCliente;
 
@@ -18,7 +21,7 @@ public class Test {
 
 		//System.out.println(SucursalDAO.getInstancia().obtenerSucursal("sucursal 5").getIdSucursal());
 		//Integer a = new Integer(692);
-		ControladorVenta.getInstancia().agregarSucursal(1,"San Telmo", "Av Independencia 450", "12 a 16");
+		/*ControladorVenta.getInstancia().agregarSucursal(1,"San Telmo", "Av Independencia 450", "12 a 16");
 		ControladorVenta.getInstancia().agregarCliente("Aram", "Independencia 639", "Activo", 1, 50000, "Taka-Taka", 10000, 5000);
 		ClienteDTO aux = ControladorVenta.getInstancia().recuperarCliente(1);
 		System.out.println("Nombre: "+aux.getNombre()+", Direccion: "+aux.getDireccion()+", Sucursal: "+aux.getIdSucu()+ ", activo: "+aux.isActivo());
@@ -32,8 +35,13 @@ public class Test {
 		List<ClienteDTO> listaux = ClienteDAO.getInstance().listarClientes();
 		for(ClienteDTO a:listaux){
 			System.out.println(a.getNombre());
-			
+				
 		}
+		*/
+		
+		System.out.println(ControladorCompra.getInstancia().recuperarMaterial(1).getNombre());
+		
+		
 	}
 
 }

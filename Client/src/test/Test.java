@@ -6,6 +6,7 @@ import java.util.List;
 
 import dto.ClienteDTO;
 import dto.EmpleadoDTO;
+import dto.MaterialDTO;
 import dto.SucursalDTO;
 import exceptions.ExceptionCliente;
 import businessDelegate.*;
@@ -42,7 +43,7 @@ public class Test {
 		caux.setLimiteCredito(2000);
 		BusinessDelegate.getInstancia().actualizarCliente(caux);
 		*/
-		for(ClienteDTO c :  BusinessDelegate.getInstancia().listarClientes()){
+	/*	for(ClienteDTO c :  BusinessDelegate.getInstancia().listarClientes()){
 			System.out.println(c.getNombre());
 		}
 		
@@ -66,6 +67,24 @@ public class Test {
 		for(EmpleadoDTO es :  BusinessDelegate.getInstancia().listarEmpleados()){
 			System.out.println(es.getArea()+es.getContrasenia()+es.getMail()+es.getNombre()+es.getUser()+es.getIdEmpleado()+es.getIdSucu()+es.getIdUsuario());
 		}*/
+		
+		MaterialDTO m = new MaterialDTO();
+		m.setCantDisponible(123);
+		m.setCantReservada(12);
+		m.setCosto(12.4f);
+		m.setIdMaterial(1);
+		m.setNombre("Material 1");
+		m.setProveedor("proveedor 1");
+		
+		//BusinessDelegate.getInstancia().agregarMaterial(m);
+		
+		//System.out.println(BusinessDelegate.getInstancia().recuperarMaterial(m.getIdMaterial()).getProveedor());
+		
+		for(MaterialDTO es :  BusinessDelegate.getInstancia().listarMateriales()){
+			System.out.println(es.getNombre() + es.getIdMaterial());
+		}
+		
+		
 	}
 
 }

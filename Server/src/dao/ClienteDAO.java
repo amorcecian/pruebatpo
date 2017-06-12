@@ -3,6 +3,7 @@ package dao;
 import negocio.Cliente;
 import negocio.CuentaCorriente;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;

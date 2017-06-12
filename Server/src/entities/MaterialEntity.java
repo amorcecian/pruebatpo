@@ -2,6 +2,8 @@ package entities;
 
 import javax.persistence.*;
 
+import dto.MaterialDTO;
+
 @Entity
 @Table(name="materiales")
 public class MaterialEntity {
@@ -81,6 +83,17 @@ public class MaterialEntity {
 
 	public void setCosto(float costo) {
 		this.costo = costo;
+	}
+
+	public MaterialDTO toDTO() {
+		MaterialDTO maux = new MaterialDTO();
+		maux.setCantDisponible(this.cantDisponible);
+		maux.setCantReservada(this.getCantReservada());
+		maux.setCosto(this.getCosto());
+		maux.setIdMaterial(this.getIdMaterial());
+		maux.setNombre(this.nombre);
+		maux.setProveedor(this.getProveedor());
+		return maux;
 	}
 	
 	

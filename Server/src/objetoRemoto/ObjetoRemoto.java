@@ -6,6 +6,7 @@ import java.util.List;
 
 import dto.ClienteDTO;
 import dto.EmpleadoDTO;
+import dto.MaterialDTO;
 import dto.SucursalDTO;
 import exceptions.ExceptionCliente;
 import interfaces.*;
@@ -60,5 +61,29 @@ public class ObjetoRemoto extends UnicastRemoteObject implements IControllerVent
 	public void agregarSucursal(SucursalDTO sucursal) throws RemoteException{
 		ControladorVenta.getInstancia().agregarSucursal(sucursal);
 	}
+
+	@Override
+	public void agregarMaterial(MaterialDTO m) throws RemoteException, ExceptionCliente {
+		ControladorCompra.getInstancia().agregarMaterial(m);
+		
+	}
+
+	@Override
+	public void actualizarMaterial(MaterialDTO e) throws RemoteException, ExceptionCliente {
+		ControladorCompra.getInstancia().actualizarMaterial(e);
+		
+	}
+
+	@Override
+	public MaterialDTO recuperarMaterial(Integer i) throws RemoteException, ExceptionCliente {
+		return ControladorCompra.getInstancia().recuperarMaterial(i);
+	}
+
+	@Override
+	public List<MaterialDTO> listarMateriales() throws RemoteException, ExceptionCliente {
+		return ControladorCompra.getInstancia().listarMateriales();
+	}
+	
+	
 	
 }

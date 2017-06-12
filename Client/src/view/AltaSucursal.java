@@ -95,8 +95,8 @@ public class AltaSucursal extends JFrame {
 		btnAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) { 
 				try{
-				SucursalDTO sucursal=new SucursalDTO(txtId.getText(),txtNombre.getText(),txtDomicilio.getText(),txtHorario.getText());
-				BusinessDelegate.getInstancia().agregarSucursal(sucursal);
+				//SucursalDTO sucursal=new SucursalDTO(txtId.getText(),txtNombre.getText(),txtDomicilio.getText(),txtHorario.getText());
+			//	BusinessDelegate.getInstancia().agregarSucursal(sucursal);
 				}
 				catch(Exception e){
 					e.printStackTrace();

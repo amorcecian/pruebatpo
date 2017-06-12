@@ -18,4 +18,8 @@ public interface IControllerVentas extends Remote {
 	public void actualizarEmpleado(EmpleadoDTO e) throws RemoteException, ExceptionCliente;
 	public EmpleadoDTO recuperarEmpleado(Integer i) throws RemoteException, ExceptionCliente;
 	public List<EmpleadoDTO> listarEmpleados() throws RemoteException, ExceptionCliente;
+	public void agregarMaterial(MaterialDTO m) throws RemoteException, ExceptionCliente;
+	public void actualizarMaterial(MaterialDTO e) throws RemoteException, ExceptionCliente;
+	public MaterialDTO recuperarMaterial(Integer i) throws RemoteException, ExceptionCliente;
+	public List<MaterialDTO> listarMateriales() throws RemoteException, ExceptionCliente;
 }

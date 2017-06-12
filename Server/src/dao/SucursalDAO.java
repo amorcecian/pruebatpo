@@ -46,6 +46,7 @@ public class SucursalDAO {
 		return sucu;
 	}
 		
+	@SuppressWarnings("unchecked")
 	public List<SucursalDTO> listarSucursales(){
 		Session session=sf.openSession();
 		List<SucursalEntity> list=session.createQuery("from sucursales").list();

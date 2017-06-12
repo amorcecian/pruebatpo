@@ -6,6 +6,7 @@ import java.util.List;
 
 import dto.ClienteDTO;
 import dto.EmpleadoDTO;
+import dto.MaterialDTO;
 import dto.SucursalDTO;
 import exceptions.ExceptionCliente;
 import interfaces.*;
@@ -75,6 +76,28 @@ public class BusinessDelegate implements IControllerVentas {
 	public void agregarSucursal(SucursalDTO sucursal) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void agregarMaterial(MaterialDTO m) throws RemoteException, ExceptionCliente {
+		objetoRemoto.agregarMaterial(m);
+		
+	}
+
+	@Override
+	public void actualizarMaterial(MaterialDTO m) throws RemoteException, ExceptionCliente {
+		objetoRemoto.actualizarMaterial(m);
+		
+	}
+
+	@Override
+	public MaterialDTO recuperarMaterial(Integer i) throws RemoteException, ExceptionCliente {
+		return objetoRemoto.recuperarMaterial(i);
+	}
+
+	@Override
+	public List<MaterialDTO> listarMateriales() throws RemoteException, ExceptionCliente {
+		return objetoRemoto.listarMateriales();
 	}
 
 }
