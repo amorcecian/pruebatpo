@@ -33,6 +33,10 @@ public class Almacenamiento {
 		
 	}
 
+	public Almacenamiento(AlmacenamientoEntity ce) {
+		
+	}
+
 	public String getCalle() {
 		return calle;
 	}
