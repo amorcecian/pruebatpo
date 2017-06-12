@@ -1,31 +1,31 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.util.List;
-import java.util.Vector;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
-
-import businessDelegate.BusinessDelegate;
+import dto.EmpleadoDTO;
 import dto.SucursalDTO;
+import businessDelegate.BusinessDelegate;
 
-public class AltaEmpleado {
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.util.List;
 
-	private JFrame frmAltaEmpleado;
+public class AltaEmpleado extends JFrame {
+
+	private JPanel contentPane;
 	private JTextField txtNombre;
 	private JTextField txtMail;
-	private JLabel lblArea;
-	private JTextField textArea;
-	private JLabel lblUsuario;
-	private JTextField txtUsuario;
-	private JLabel lblContrasea;
+	private JTextField txtArea;
+	private JTextField txtUser;
 	private JTextField txtContraseña;
-	private JLabel lblSucursal;
 
 	/**
 	 * Launch the application.
@@ -34,8 +34,8 @@ public class AltaEmpleado {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AltaEmpleado window = new AltaEmpleado();
-					window.frmAltaEmpleado.setVisible(true);
+					AltaEmpleado frame = new AltaEmpleado();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -44,88 +44,127 @@ public class AltaEmpleado {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the frame.
 	 */
 	public AltaEmpleado() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frmAltaEmpleado = new JFrame();
-		frmAltaEmpleado.setTitle("Alta Empleado");
-		frmAltaEmpleado.setBounds(100, 100, 450, 300);
-		frmAltaEmpleado.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmAltaEmpleado.getContentPane().setLayout(null);
-		frmAltaEmpleado.setLocationRelativeTo(null);
+		setTitle("Alta Empleado");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 380);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setBounds(22, 35, 90, 14);
-		frmAltaEmpleado.getContentPane().add(lblNombre);
-		
-		txtNombre = new JTextField();
-		txtNombre.setBounds(122, 32, 180, 20);
-		frmAltaEmpleado.getContentPane().add(txtNombre);
-		txtNombre.setColumns(10);
+		lblNombre.setBounds(10, 27, 144, 14);
+		contentPane.add(lblNombre);
 		
 		JLabel lblMail = new JLabel("Mail:");
-		lblMail.setBounds(22, 63, 90, 14);
-		frmAltaEmpleado.getContentPane().add(lblMail);
+		lblMail.setBounds(10, 68, 144, 14);
+		contentPane.add(lblMail);
+		
+		JLabel lblArea = new JLabel("Area:");
+		lblArea.setBounds(10, 109, 144, 14);
+		contentPane.add(lblArea);
+		
+		JLabel lblUser = new JLabel("User:");
+		lblUser.setBounds(10, 150, 144, 14);
+		contentPane.add(lblUser);
+		
+		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
+		lblContrasea.setBounds(10, 191, 144, 14);
+		contentPane.add(lblContrasea);
+		
+		JLabel lblSucursal = new JLabel("Sucursal:");
+		lblSucursal.setBounds(10, 232, 144, 14);
+		contentPane.add(lblSucursal);
+		
+		txtNombre = new JTextField();
+		txtNombre.setBounds(140, 24, 209, 20);
+		contentPane.add(txtNombre);
+		txtNombre.setColumns(10);
 		
 		txtMail = new JTextField();
-		txtMail.setBounds(122, 60, 180, 20);
-		frmAltaEmpleado.getContentPane().add(txtMail);
 		txtMail.setColumns(10);
+		txtMail.setBounds(140, 65, 209, 20);
+		contentPane.add(txtMail);
 		
-		lblArea = new JLabel("Area:");
-		lblArea.setBounds(22, 91, 90, 14);
-		frmAltaEmpleado.getContentPane().add(lblArea);
+		txtArea = new JTextField();
+		txtArea.setColumns(10);
+		txtArea.setBounds(140, 106, 209, 20);
+		contentPane.add(txtArea);
 		
-		textArea = new JTextField();
-		textArea.setBounds(122, 88, 180, 20);
-		frmAltaEmpleado.getContentPane().add(textArea);
-		textArea.setColumns(10);
-		
-		lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(22, 126, 90, 14);
-		frmAltaEmpleado.getContentPane().add(lblUsuario);
-		
-		txtUsuario = new JTextField();
-		txtUsuario.setBounds(122, 123, 180, 20);
-		frmAltaEmpleado.getContentPane().add(txtUsuario);
-		txtUsuario.setColumns(10);
-		
-		lblContrasea = new JLabel("Contrase\u00F1a:");
-		lblContrasea.setBounds(22, 159, 90, 14);
-		frmAltaEmpleado.getContentPane().add(lblContrasea);
+		txtUser = new JTextField();
+		txtUser.setColumns(10);
+		txtUser.setBounds(140, 147, 209, 20);
+		contentPane.add(txtUser);
 		
 		txtContraseña = new JTextField();
-		txtContraseña.setBounds(122, 156, 180, 20);
-		frmAltaEmpleado.getContentPane().add(txtContraseña);
 		txtContraseña.setColumns(10);
-		
-		lblSucursal = new JLabel("Sucursal:");
-		lblSucursal.setBounds(22, 199, 90, 14);
-		frmAltaEmpleado.getContentPane().add(lblSucursal);
+		txtContraseña.setBounds(140, 188, 209, 20);
+		contentPane.add(txtContraseña);
 		
 		
-		try{
-		List<SucursalDTO> listaSucursales=BusinessDelegate.getInstancia().listarSucursales();		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(122, 195, 180, 22);	
-		comboBox.addItem("");
-		for(SucursalDTO sucu:listaSucursales){			
-			comboBox.addItem(sucu.getNombre());			
+		class ComboItem {
+
+		    private Integer value;
+		    private String label;
+
+		    public ComboItem(Integer value, String label) {
+		        this.value = value;
+		        this.label = label;
+		    }
+
+		    public Integer getValue() {
+		        return this.value;
+		    }
+
+		    public String getLabel() {
+		        return this.label;
+		    }
+
+		    @Override
+		    public String toString() {
+		        return label;
+		    }
 		}
-		frmAltaEmpleado.getContentPane().add(comboBox);
+		
+		final JComboBox<ComboItem> comboBox = new JComboBox();
+		comboBox.addItem(new ComboItem(0,""));
+		try{
+			
+			List <SucursalDTO> sucursales=BusinessDelegate.getInstancia().listarSucursales();
+			for(SucursalDTO sucu:sucursales){
+				comboBox.addItem(new ComboItem(sucu.getIdSucursal(), sucu.getNombre()));
+			}
+			comboBox.setBounds(140, 228, 209, 22);
+			contentPane.add(comboBox);			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
-		JButton btnCargar = new JButton("Cargar");
-		btnCargar.setBounds(318, 239, 91, 23);
-		frmAltaEmpleado.getContentPane().add(btnCargar);
+		
+		JButton btnCargar = new JButton("Alta");
+		btnCargar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ComboItem ci=(ComboItem) comboBox.getSelectedItem();
+				Integer idSucursal=ci.getValue();
+				EmpleadoDTO empleado=new EmpleadoDTO(txtNombre.getText(),txtMail.getText(),txtArea.getText(),txtUser.getText(),txtContraseña.getText(),idSucursal);
+			}
+		});
+		btnCargar.setBounds(296, 305, 91, 23);
+		contentPane.add(btnCargar);
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MenuPrincipal mp=new MenuPrincipal();
+				mp.setVisible(true);
+				mp.setLocationRelativeTo(null);
+				setVisible(false);
+			}
+		});
+		btnVolver.setBounds(187, 305, 91, 23);
+		contentPane.add(btnVolver);
 	}
 }

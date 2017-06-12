@@ -21,7 +21,11 @@ public class Test {
 
 		//System.out.println(SucursalDAO.getInstancia().obtenerSucursal("sucursal 5").getIdSucursal());
 		//Integer a = new Integer(692);
+<<<<<<< Updated upstream
 		/*ControladorVenta.getInstancia().agregarSucursal(1,"San Telmo", "Av Independencia 450", "12 a 16");
+=======
+		//ControladorVenta.getInstancia().agregarSucursal(1,"San Telmo", "Av Independencia 450", "12 a 16");
+>>>>>>> Stashed changes
 		ControladorVenta.getInstancia().agregarCliente("Aram", "Independencia 639", "Activo", 1, 50000, "Taka-Taka", 10000, 5000);
 		ClienteDTO aux = ControladorVenta.getInstancia().recuperarCliente(1);
 		System.out.println("Nombre: "+aux.getNombre()+", Direccion: "+aux.getDireccion()+", Sucursal: "+aux.getIdSucu()+ ", activo: "+aux.isActivo());

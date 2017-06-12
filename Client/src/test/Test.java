@@ -17,7 +17,7 @@ public class Test {
 
 	public static void main(String[] args) throws RemoteException, ExceptionCliente {		
 
-		/*List<SucursalDTO> list=new ArrayList<SucursalDTO>();
+		List<SucursalDTO> list=new ArrayList<SucursalDTO>();
 		try{
 			list=BusinessDelegate.getInstancia().listarSucursales();
 			for(SucursalDTO sucu:list){
@@ -26,7 +26,7 @@ public class Test {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
+		/*
 		ClienteDTO caux = new ClienteDTO();
 		caux.setCondicion("activo");
 		caux.setDireccion("mosconi 123");
@@ -42,8 +42,13 @@ public class Test {
 		caux = BusinessDelegate.getInstancia().recuperarCliente(2);
 		caux.setLimiteCredito(2000);
 		BusinessDelegate.getInstancia().actualizarCliente(caux);
+<<<<<<< Updated upstream
 		*/
 	/*	for(ClienteDTO c :  BusinessDelegate.getInstancia().listarClientes()){
+=======
+		
+		for(ClienteDTO c :  BusinessDelegate.getInstancia().listarClientes()){
+>>>>>>> Stashed changes
 			System.out.println(c.getNombre());
 		}
 		

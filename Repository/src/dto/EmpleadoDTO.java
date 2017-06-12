@@ -19,6 +19,17 @@ public class EmpleadoDTO implements Serializable{
 	private Integer idSucu;
 	private boolean activo;
 	
+	public EmpleadoDTO(){}
+	
+	public EmpleadoDTO(String nombre,String mail,String area,String user,String contraseña, Integer idSucursal){
+		this.nombre=nombre;
+		this.mail=mail;
+		this.area=area;
+		this.user=user;
+		this.contrasenia=contraseña;
+		this.idSucu=idSucursal;
+	}
+	
 	
 	public Integer getIdEmpleado() {
 		return idEmpleado;

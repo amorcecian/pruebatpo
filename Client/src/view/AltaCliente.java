@@ -5,6 +5,8 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javafx.css.ParsedValue;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -12,8 +14,14 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+
+import businessDelegate.BusinessDelegate;
+import dto.ClienteDTO;
+import dto.SucursalDTO;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.List;
 
 public class AltaCliente extends JFrame {
 
@@ -121,18 +129,69 @@ public class AltaCliente extends JFrame {
 		txtValorConsig.setBounds(181, 291, 203, 20);
 		contentPane.add(txtValorConsig);
 		
+
+		
+		class ComboItem {
+
+		    private Integer value;
+		    private String label;
+
+		    public ComboItem(Integer value, String label) {
+		        this.value = value;
+		        this.label = label;
+		    }
+
+		    public Integer getValue() {
+		        return this.value;
+		    }
+
+		    public String getLabel() {
+		        return this.label;
+		    }
+
+		    @Override
+		    public String toString() {
+		        return label;
+		    }
+		}
+		
+		final JComboBox<ComboItem> comboBox = new JComboBox();
+		comboBox.addItem(new ComboItem(0,""));
+		try{
+			
+			List <SucursalDTO> sucursales=BusinessDelegate.getInstancia().listarSucursales();
+			for(SucursalDTO sucu:sucursales){
+				comboBox.addItem(new ComboItem(sucu.getIdSucursal(), sucu.getNombre()));
+			}
+			comboBox.setBounds(181, 334, 203, 22);
+			contentPane.add(comboBox);			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MenuPrincipal mp=new MenuPrincipal();
+				mp.setVisible(true);
+				mp.setLocationRelativeTo(null);
+				setVisible(false);
+			}
+		});
+		btnVolver.setBounds(225, 395, 91, 23);
+		contentPane.add(btnVolver);
+		
 		JButton btnAlta = new JButton("Alta");
 		btnAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				ComboItem ci=(ComboItem) comboBox.getSelectedItem();
+				Integer idSucursal=ci.getValue();
+				//ClienteDTO cli=new ClienteDTO(txtNombre.getText(),txtDireccion.getText(),txtCondicion.getText(),
+				//		Float txtLimiteCredito.getText(),txtCondPago.getText(),txtSaldo.getText(),txtValorConsig.getText(),idSucursal);
+				//TERMINAR
 			}
 		});
 		btnAlta.setBounds(341, 395, 91, 23);
 		contentPane.add(btnAlta);
-		
-		JComboBox comboSucursal = new JComboBox();
-		comboSucursal.setBounds(181, 334, 203, 22);
-		contentPane.add(comboSucursal);
 	}
-
 }

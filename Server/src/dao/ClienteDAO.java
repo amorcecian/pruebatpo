@@ -36,8 +36,7 @@ public class ClienteDAO {
 	public void grabarCliente(Cliente c) throws ExceptionCliente{
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session s = sf.openSession();
-		try {
-			
+		try {			
 			ClienteEntity ce = clienteToEntity(c);
 			s.save(ce);
 		} catch (HibernateException e) {

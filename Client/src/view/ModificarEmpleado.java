@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 
 import dto.EmpleadoDTO;
 import businessDelegate.BusinessDelegate;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ModificarEmpleado extends JFrame {
 
@@ -54,13 +56,14 @@ public class ModificarEmpleado extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblEmpleados = new JLabel("Empleados:");
-		lblEmpleados.setBounds(31, 23, 80, 14);
+		lblEmpleados.setBounds(31, 23, 118, 14);
 		contentPane.add(lblEmpleados);
 		
 		
 		try{
 			JComboBox lstEmpleados = new JComboBox();
-			lstEmpleados.setBounds(109, 19, 199, 22);
+			lstEmpleados.setBounds(170, 16, 199, 22);
+			lstEmpleados.addItem("");
 			List<EmpleadoDTO> lstEmpleado=BusinessDelegate.getInstancia().listarEmpleados();
 			for(EmpleadoDTO emp:lstEmpleado){
 				lstEmpleados.addItem(emp.getNombre());
@@ -72,60 +75,72 @@ public class ModificarEmpleado extends JFrame {
 		
 		
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setBounds(31, 60, 46, 14);
+		lblNombre.setBounds(31, 60, 118, 14);
 		contentPane.add(lblNombre);
 		
 		JLabel lblMail = new JLabel("Mail:");
-		lblMail.setBounds(31, 93, 46, 14);
+		lblMail.setBounds(31, 93, 118, 14);
 		contentPane.add(lblMail);
 		
 		JLabel lblArea = new JLabel("Area:");
-		lblArea.setBounds(31, 127, 73, 14);
+		lblArea.setBounds(31, 127, 118, 14);
 		contentPane.add(lblArea);
 		
 		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(31, 165, 80, 14);
+		lblUsuario.setBounds(31, 165, 118, 14);
 		contentPane.add(lblUsuario);
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
-		lblContrasea.setBounds(31, 202, 87, 14);
+		lblContrasea.setBounds(31, 202, 118, 14);
 		contentPane.add(lblContrasea);
 		
 		JLabel lblSucursal = new JLabel("Sucursal:");
-		lblSucursal.setBounds(31, 232, 80, 14);
+		lblSucursal.setBounds(31, 232, 118, 14);
 		contentPane.add(lblSucursal);
 		
 		textField = new JTextField();
-		textField.setBounds(108, 57, 200, 20);
+		textField.setBounds(169, 54, 200, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(109, 90, 200, 20);
+		textField_1.setBounds(170, 87, 200, 20);
 		contentPane.add(textField_1);
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
-		textField_2.setBounds(109, 124, 200, 20);
+		textField_2.setBounds(170, 121, 200, 20);
 		contentPane.add(textField_2);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(108, 162, 200, 20);
+		textField_3.setBounds(169, 159, 200, 20);
 		contentPane.add(textField_3);
 		
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
-		textField_4.setBounds(109, 199, 200, 20);
+		textField_4.setBounds(170, 196, 200, 20);
 		contentPane.add(textField_4);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(109, 227, 202, 22);
+		comboBox.setBounds(170, 224, 202, 22);
 		contentPane.add(comboBox);
 		
 		JButton btnModificar = new JButton("Modificar");
 		btnModificar.setBounds(317, 273, 91, 23);
 		contentPane.add(btnModificar);
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MenuPrincipal mp=new MenuPrincipal();
+				mp.setVisible(true);
+				mp.setLocationRelativeTo(null);
+				setVisible(false);
+			}
+		});
+		btnVolver.setBounds(193, 273, 91, 23);
+		contentPane.add(btnVolver);
 	}
 }

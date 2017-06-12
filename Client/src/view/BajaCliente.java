@@ -13,6 +13,8 @@ import javax.swing.JButton;
 
 import dto.ClienteDTO;
 import businessDelegate.BusinessDelegate;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class BajaCliente extends JFrame {
@@ -70,6 +72,18 @@ public class BajaCliente extends JFrame {
 		JButton btnBaja = new JButton("Eliminar");
 		btnBaja.setBounds(297, 85, 91, 23);
 		contentPane.add(btnBaja);
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MenuPrincipal mp=new MenuPrincipal();
+				mp.setVisible(true);
+				mp.setLocationRelativeTo(null);
+				setVisible(false);
+			}
+		});
+		btnVolver.setBounds(181, 85, 91, 23);
+		contentPane.add(btnVolver);
 	}
 
 }

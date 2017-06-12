@@ -2,6 +2,7 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,6 +10,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+
+import dto.EmpleadoDTO;
+import businessDelegate.BusinessDelegate;
 
 public class AsignarEncargado extends JFrame {
 
@@ -41,14 +45,24 @@ public class AsignarEncargado extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setLocationRelativeTo(null);
 		
 		JLabel lblEmpleado = new JLabel("Empleados:");
 		lblEmpleado.setBounds(20, 39, 107, 14);
 		contentPane.add(lblEmpleado);
 		
+		try{
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(100, 35, 211, 22);
+		comboBox.addItem("");
+		List <EmpleadoDTO> empleados=BusinessDelegate.getInstancia().listarEmpleados();
+		for(EmpleadoDTO emp:empleados){
+			comboBox.insertItemAt(emp.getNombre(), emp.getIdEmpleado());
+		}
 		contentPane.add(comboBox);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		
 		JButton btnAsignar = new JButton("Asignar");
 		btnAsignar.setBounds(271, 68, 91, 23);

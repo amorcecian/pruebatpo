@@ -18,13 +18,27 @@ public class ClienteDTO implements Serializable {
 	private String condicion;
 	//private SucursalDTO sucursal;
 	private boolean activo;
-	float limiteCredito;
-	String condicionPago;
-	float saldo;
-	float valorConsignacion;
+	private float limiteCredito;
+	private String condicionPago;
+	private float saldo;
+	private float valorConsignacion;
 	private Integer idSucu;
 	
 	
+	public ClienteDTO(String nombre, String direccion, String condicion, float limiteCredito,
+			String condPago, float saldo, float valorConsignacion, Integer idSucursa) {
+		this.nombre=nombre;
+		this.direccion=direccion;
+		this.condicion=condicion;
+		this.limiteCredito=limiteCredito;
+		this.condicionPago=condPago;
+		this.saldo=saldo;
+		this.valorConsignacion=valorConsignacion;
+		this.idSucu=idSucursa;		
+	}
+	
+	public ClienteDTO(){}
+
 	public Integer getIdSucu() {
 		return idSucu;
 	}

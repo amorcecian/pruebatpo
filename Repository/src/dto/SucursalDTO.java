@@ -9,7 +9,7 @@ public class SucursalDTO implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int idSucursal;
+	private Integer idSucursal;
 	private String nombre;
 	private String domicilio;
 	private String horario;
@@ -18,7 +18,7 @@ public class SucursalDTO implements Serializable {
 	
 	public SucursalDTO(){}
 	
-	public SucursalDTO(int id,String nombre,String domicilio, String horario){
+	public SucursalDTO(Integer id,String nombre,String domicilio, String horario){
 		this.idSucursal=id;
 		this.nombre=nombre;	
 		this.domicilio=domicilio;

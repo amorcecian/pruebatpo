@@ -7,6 +7,7 @@ import negocio.*;
 import dto.*;
 import entities.EmpleadoEntity;
 import exceptions.ExceptionCliente;
+import exceptions.ExceptionSucursal;
 import dao.*;
 
 public class ControladorVenta {
@@ -101,7 +102,7 @@ public class ControladorVenta {
 	//METODOS SUCURSAL
 	//*********************************************************************************	
 		//Agregar Sucursal
-	public void agregarSucursal(SucursalDTO sucursal){
+	public void agregarSucursal(SucursalDTO sucursal) {
 		Sucursal sucu = new Sucursal(sucursal.getIdSucursal(),sucursal.getNombre(),sucursal.getDomicilio(),sucursal.getHorario());
 		SucursalDAO.getInstancia().agregarSucursal(sucu);
 	}
@@ -114,7 +115,12 @@ public class ControladorVenta {
 	public List<SucursalDTO> listarSucursales(){
 		return SucursalDAO.getInstancia().listarSucursales();	
 	}
-
+	
+	/*
+	public void asignarEncargado(Integer idEncargado){
+		SucursalDAO.getInstancia().asignarEncargado(idEncargado);
+	}
+	*/
 	//*********************************************************************************
 	//METODOS EMPLEADO
 	//*********************************************************************************	
