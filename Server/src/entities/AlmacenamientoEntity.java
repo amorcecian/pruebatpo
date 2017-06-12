@@ -2,6 +2,8 @@ package entities;
 
 import javax.persistence.*;
 
+import dto.AlmacenamientoDTO;
+
 
 @Entity
 @Table(name="almacenamientos")
@@ -93,6 +95,11 @@ public class AlmacenamientoEntity {
 
 	public void setLote(LoteEntity lote) {
 		this.lote = lote;
+	}
+
+	public AlmacenamientoDTO toDTO() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

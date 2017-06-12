@@ -1,5 +1,7 @@
 package negocio;
 
+import entities.AlmacenamientoEntity;
+
 public class Almacenamiento {
 	private String calle;
 	private int bloque;
@@ -26,6 +28,10 @@ public class Almacenamiento {
 	}
 
 
+
+	public Almacenamiento(AlmacenamientoEntity ce) {
+		
+	}
 
 	public String getCalle() {
 		return calle;
