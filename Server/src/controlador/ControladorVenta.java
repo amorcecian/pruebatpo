@@ -110,6 +110,10 @@ public class ControladorVenta {
 	public Sucursal recuperarSucursal(Integer idSucursal){
 		return SucursalDAO.getInstancia().obtenerSucursal(idSucursal);
 	}
+	
+	public List<SucursalDTO> listarSucursales(){
+		return SucursalDAO.getInstancia().listarSucursales();	
+	}
 
 	//*********************************************************************************
 	//METODOS EMPLEADO
@@ -124,9 +128,7 @@ public class ControladorVenta {
 	
 	
 	
-	public List<SucursalDTO> listarSucursales(){
-		return SucursalDAO.getInstancia().listarSucursales();	
-	}
+
 	
 	public int generarPedido(int idCliente, int idSucursal, String fechaGeneracion){
 		return 0;
