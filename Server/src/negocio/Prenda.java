@@ -14,30 +14,8 @@ public class Prenda {
 	private Stock stock;
 	private List<EtapaProductiva> etapaProd;
 	private List<MaterialPorPrenda> materiales;
-	private boolean activo;
 	
 	public Prenda(){}
-
-	public Prenda(int idPrenda, String descripcion, String color, String talle,
-			float precioVenta, String temporada, float tiempoProd,
-			int cantProducir, Stock stock, List<EtapaProductiva> etapaProd,
-			List<MaterialPorPrenda> materiales, boolean activo) {
-		super();
-		this.idPrenda = idPrenda;
-		this.descripcion = descripcion;
-		this.color = color;
-		this.talle = talle;
-		this.precioVenta = precioVenta;
-		this.temporada = temporada;
-		this.tiempoProd = tiempoProd;
-		this.cantProducir = cantProducir;
-		this.stock = stock;
-		this.etapaProd = etapaProd;
-		this.materiales = materiales;
-		this.activo = activo;
-	}
-
-
 
 	public int getIdPrenda() {
 		return idPrenda;
@@ -125,14 +103,6 @@ public class Prenda {
 
 	public void setMateriales(List<MaterialPorPrenda> materiales) {
 		this.materiales = materiales;
-	}
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
 	}
 	
 	

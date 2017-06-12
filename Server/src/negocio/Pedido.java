@@ -13,14 +13,12 @@ public class Pedido {
 	private Sucursal sucursal;
 	private String estado;
 	private String motivoCancelar;
-	private boolean activo;
-
-
+	
 
 	public Pedido(int idPedido, List<ItemPedido> items, String fechaGeneracion,
 			String fechaEstDespacho, String fechaRealDespacho, float valor,
 			Cliente cliente, Sucursal sucursal, String estado,
-			String motivoCancelar, boolean activo) {
+			String motivoCancelar) {
 		super();
 		this.idPedido = idPedido;
 		this.items = items;
@@ -32,8 +30,9 @@ public class Pedido {
 		this.sucursal = sucursal;
 		this.estado = estado;
 		this.motivoCancelar = motivoCancelar;
-		this.activo = activo;
 	}
+
+
 
 	public int getIdPedido() {
 		return idPedido;
@@ -113,14 +112,6 @@ public class Pedido {
 
 	public void setMotivoCancelar(String motivoCancelar) {
 		this.motivoCancelar = motivoCancelar;
-	}
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
 	}
 	
 	

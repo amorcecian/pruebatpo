@@ -13,23 +13,10 @@ public class MaterialDTO implements Serializable{
 	private Integer cantReservada;
 	private String proveedor;
 	private float costo;
-	private boolean activo;
-	
-	public MaterialDTO(){}
 	
 	
-	public MaterialDTO(Integer idMaterial, String nombre,
-			Integer cantDisponible, Integer cantReservada, String proveedor,
-			float costo, boolean activo) {
-		super();
-		this.idMaterial = idMaterial;
-		this.nombre = nombre;
-		this.cantDisponible = cantDisponible;
-		this.cantReservada = cantReservada;
-		this.proveedor = proveedor;
-		this.costo = costo;
-		this.activo = activo;
-	}
+	
+	
 	public Integer getIdMaterial() {
 		return idMaterial;
 	}
@@ -65,15 +52,6 @@ public class MaterialDTO implements Serializable{
 	}
 	public void setCosto(float costo) {
 		this.costo = costo;
-	}
-	public boolean isActivo() {
-		return activo;
-	}
-	public void setActivo(boolean activo) {
-		this.activo = activo;
-	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 	
 	

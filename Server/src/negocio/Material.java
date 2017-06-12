@@ -3,7 +3,6 @@ package negocio;
 import dto.MaterialDTO;
 import entities.MaterialEntity;
 
-
 public class Material {
 	private Integer idMaterial;
 	private String nombre;
@@ -11,26 +10,17 @@ public class Material {
 	private Integer cantReservada;
 	private String proveedor;
 	private float costo;
-	private boolean activo;
 	
 	public Material(){}
-	
-	public Material(MaterialEntity me){}
-	
-	public Material(Integer idMaterial, String nombre, Integer cantDisponible,
-			Integer cantReservada, String proveedor, float costo, boolean activo) {
-		super();
-		this.idMaterial = idMaterial;
-		this.nombre = nombre;
-		this.cantDisponible = cantDisponible;
-		this.cantReservada = cantReservada;
-		this.proveedor = proveedor;
-		this.costo = costo;
-		this.activo = activo;
+
+	public Material(MaterialEntity me) {
+		this.setCantDisponible(me.getCantDisponible());
+		this.setCantReservada(me.getCantReservada());
+		this.setCosto(me.getCosto());
+		this.setIdMaterial(me.getIdMaterial());
+		this.setNombre(me.getNombre());
+		this.setProveedores(me.getProveedor());
 	}
-
-
-
 
 	public Integer getIdMaterial() {
 		return idMaterial;
@@ -78,24 +68,6 @@ public class Material {
 
 	public void setCosto(float costo) {
 		this.costo = costo;
-	}
-	
-	
-
-	public String getProveedor() {
-		return proveedor;
-	}
-
-	public void setProveedor(String proveedor) {
-		this.proveedor = proveedor;
-	}
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
 	}
 
 	public MaterialDTO toDTO() {

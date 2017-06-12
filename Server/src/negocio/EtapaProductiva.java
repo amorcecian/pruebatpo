@@ -4,22 +4,8 @@ public class EtapaProductiva {
 	private AreaProductiva areaProductiva;
 	private int tiempoProduccion;
 	private int orden;
-	private boolean activo;
 	
 	public EtapaProductiva(){}
-	
-	
-
-	public EtapaProductiva(AreaProductiva areaProductiva, int tiempoProduccion,
-			int orden, boolean activo) {
-		super();
-		this.areaProductiva = areaProductiva;
-		this.tiempoProduccion = tiempoProduccion;
-		this.orden = orden;
-		this.activo = activo;
-	}
-
-
 
 	public AreaProductiva getAreaProductiva() {
 		return areaProductiva;
@@ -43,18 +29,6 @@ public class EtapaProductiva {
 
 	public void setOrden(int orden) {
 		this.orden = orden;
-	}
-
-
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
 	}
 	
 	

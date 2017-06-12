@@ -4,20 +4,8 @@ public class PrendaVenta {
 	private int idPrendaVenta;
 	private String estado;
 	private Lote lote;
-	private boolean activo;
 	
 	public PrendaVenta(){}
-
-	public PrendaVenta(int idPrendaVenta, String estado, Lote lote,
-			boolean activo) {
-		super();
-		this.idPrendaVenta = idPrendaVenta;
-		this.estado = estado;
-		this.lote = lote;
-		this.activo = activo;
-	}
-
-
 
 	public int getIdPrendaVenta() {
 		return idPrendaVenta;
@@ -42,13 +30,7 @@ public class PrendaVenta {
 	public void setLote(Lote lote) {
 		this.lote = lote;
 	}
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
-	}
+	
+	
 
 }

@@ -7,24 +7,8 @@ public class AreaProductiva {
 	private String nombre;
 	private List<LineaProductiva> lineas;
 	private List<Lote> lotesPendientes;
-	private boolean activo;
 	
 	public AreaProductiva(){}
-	
-	
-
-	public AreaProductiva(int idAreaProductiva, String nombre,
-			List<LineaProductiva> lineas, List<Lote> lotesPendientes,
-			boolean activo) {
-		super();
-		this.idAreaProductiva = idAreaProductiva;
-		this.nombre = nombre;
-		this.lineas = lineas;
-		this.lotesPendientes = lotesPendientes;
-		this.activo = activo;
-	}
-
-
 
 	public int getIdAreaProductiva() {
 		return idAreaProductiva;
@@ -56,18 +40,6 @@ public class AreaProductiva {
 
 	public void setLotesPendientes(List<Lote> lotesPendientes) {
 		this.lotesPendientes = lotesPendientes;
-	}
-
-
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
 	}
 	
 	

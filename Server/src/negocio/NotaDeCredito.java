@@ -5,23 +5,8 @@ public class NotaDeCredito {
 	private Prenda prenda;
 	private Cliente cliente;
 	private Pedido pedido;
-	private boolean activo;
 	
 	public NotaDeCredito(){}
-	
-	
-
-	public NotaDeCredito(int cantidad, Prenda prenda, Cliente cliente,
-			Pedido pedido, boolean activo) {
-		super();
-		this.cantidad = cantidad;
-		this.prenda = prenda;
-		this.cliente = cliente;
-		this.pedido = pedido;
-		this.activo = activo;
-	}
-
-
 
 	public int getCantidad() {
 		return cantidad;
@@ -54,17 +39,7 @@ public class NotaDeCredito {
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
 	}
-
-
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
-	}
+	
+	
 
 }

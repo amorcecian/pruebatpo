@@ -9,25 +9,8 @@ public class Almacenamiento {
 	private int posicion;
 	private boolean libre;
 	private Lote lote;
-	private boolean activo;
 	
 	public Almacenamiento(){}
-	
-	
-
-	public Almacenamiento(String calle, int bloque, int estante, int posicion,
-			boolean libre, Lote lote, boolean activo) {
-		super();
-		this.calle = calle;
-		this.bloque = bloque;
-		this.estante = estante;
-		this.posicion = posicion;
-		this.libre = libre;
-		this.lote = lote;
-		this.activo = activo;
-	}
-
-
 
 	public Almacenamiento(AlmacenamientoEntity ce) {
 		
@@ -84,20 +67,6 @@ public class Almacenamiento {
 	public void setLote(Lote lote) {
 		this.lote = lote;
 	}
-
-
-
-	public boolean isActivo() {
-		return activo;
-	}
-
-
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
-	}
-	
-	
 	
 	
 
